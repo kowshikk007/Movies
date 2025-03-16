@@ -9,7 +9,7 @@ const MovieList = () => {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:3200/api/movies")
+        axios.get("https://movies-1-elfz.onrender.com/api/movies")
             .then((res) => {
                 console.log("Fetched Movies Response:", res);
                 setMovies(res.data);
@@ -19,7 +19,7 @@ const MovieList = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:3200/api/movies/${id}`);
+            await axios.delete(`https://movies-1-elfz.onrender.com/api/movies/${id}`);
             setMovies(movies.filter(movie => movie._id !== id));
         } catch (error) {
             console.error("Error deleting movie:", error);
