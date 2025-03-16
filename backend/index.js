@@ -11,7 +11,7 @@ const app = express();
 // ✅ Enable CORS (Allow frontend to access backend)
 app.use(cors({
     origin: "https://movies-front-8nty.onrender.com"
-    methods: "GET,POST,PUT,DELETE",
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));
 
